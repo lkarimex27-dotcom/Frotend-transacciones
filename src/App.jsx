@@ -1,6 +1,6 @@
 import React from 'react'
 import { AppRoutes } from './AppRoutes'
-import { AuthProvider } from './features/auth/context/Authcontext'
+import { AuthProvider } from './features/auth/context/AuthContext'
 
 export default function App() {
   return (
