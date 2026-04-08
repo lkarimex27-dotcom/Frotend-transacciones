@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
         setToken(jwt);
     };
 
-    // Función para cerrar sesión
+    // Función para cerrar sesiónñlfdwfwf
     const logout = () => {
         localStorage.removeItem('token');
         setToken(null);
