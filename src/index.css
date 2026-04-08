@@ -1,0 +1,37 @@
+:root {
+  --bg-body: #1a202c; /* Fondo oscuro exterior */
+  --bg-card: #ffffff; /* Fondo blanco de la App */
+  --text-main: #2d3748;
+  --border-color: #e2e8f0;
+  
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-body);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Forzamos que los inputs no hereden colores oscuros raros */
+input {
+  background-color: white !important;
+  color: #333 !important;
+}
+
+h1, h2, h3 {
+  color: #1a202c;
+  margin-top: 0;
+}
