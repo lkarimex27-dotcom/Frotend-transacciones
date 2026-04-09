@@ -1,4 +1,4 @@
-import TransactionItem from './TransactionItem';
+import TransactionItem from './transactionItem';
 
 export default function TransactionList({ items, onChange }) {
     if (!items || !items.length) {
