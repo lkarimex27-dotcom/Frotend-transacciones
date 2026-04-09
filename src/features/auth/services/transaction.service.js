@@ -4,8 +4,7 @@ import api from "../api/axios";
 export const listTransactions = (params = {}) => 
     api.get("/transacciones", { params }); 
 
-export const createTransaction = (data) => 
-    api.post("/transacciones", data);
+export const createTransaction = (data) => api.post("/transacciones", data);
 
 export const getTransaction = (id) => 
     api.get(`/transacciones/${id}`);
