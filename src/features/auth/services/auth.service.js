@@ -1,22 +1,18 @@
-import axios from "axios";
+// Importamos la instancia que ya tiene configurado el Token y la URL base
+import api from "../api/axios"; 
 
-// 1. Quitamos la barra final de la URL base
-const API_URL = "https://backend-transacciones.onrender.com/api";
-
-// ✅ EXPORTAR LOGIN
+// ✅ LOGIN
+// Como 'api' ya tiene la base "https://.../api", solo sumamos el resto
 export const loginRequest = async (user) => {
-  // 2. Agregamos /auth antes de /login
-  return await axios.post(`${API_URL}/auth/login`, user);
+  return await api.post("/auth/login", user);
 };
 
-// ✅ EXPORTAR REGISTER
+// ✅ REGISTER
 export const registerRequest = async (user) => {
-  // 2. Agregamos /auth antes de /register
-  return await axios.post(`${API_URL}/auth/register`, user);
+  return await api.post("/auth/register", user);
 };
 
-// ✅ EXPORTAR RECOVER
+// ✅ RECOVER
 export const recoverPasswordRequest = (email) => {
-    // Aquí ya tenías el /auth, solo quitamos la barra doble
-    return axios.post(`${API_URL}/auth/recover`, { email }); 
+  return api.post("/auth/recover", { email }); 
 };
