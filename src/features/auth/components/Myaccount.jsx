@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/authcontext';
+import { useAuth } from '../context/AuthContext';
 // 1. Importamos el nuevo servicio (asegúrate de que el nombre coincida)
 import { loginRequest, registerRequest, recoverPasswordRequest } from '../services/auth.service';
 import {
