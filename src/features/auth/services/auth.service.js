@@ -1,20 +1,22 @@
 import axios from "axios";
 
-// Configura la URL base de tu backend (ajusta el puerto si es necesario)
-const API_URL = "https://backend-transacciones.onrender.com/api/";
+// 1. Quitamos la barra final de la URL base
+const API_URL = "https://backend-transacciones.onrender.com/api";
 
 // ✅ EXPORTAR LOGIN
 export const loginRequest = async (user) => {
-  return await axios.post(`${API_URL}/login`, user);
+  // 2. Agregamos /auth antes de /login
+  return await axios.post(`${API_URL}/auth/login`, user);
 };
 
-// ✅ EXPORTAR REGISTER (Esta es la que te falta)
+// ✅ EXPORTAR REGISTER
 export const registerRequest = async (user) => {
-  return await axios.post(`${API_URL}/register`, user);
+  // 2. Agregamos /auth antes de /register
+  return await axios.post(`${API_URL}/auth/register`, user);
 };
 
-// En src/features/auth/services/auth.service.js
+// ✅ EXPORTAR RECOVER
 export const recoverPasswordRequest = (email) => {
+    // Aquí ya tenías el /auth, solo quitamos la barra doble
     return axios.post(`${API_URL}/auth/recover`, { email }); 
-    // Ajusta la URL según como la tenga tu profesor o equipo de backend
 };
