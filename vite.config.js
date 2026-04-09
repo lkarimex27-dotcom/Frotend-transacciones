@@ -4,9 +4,12 @@ import { VitePWA } from "vite-plugin-pwa";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(),
+  plugins: [
+    react(),
     VitePWA({
       registerType: "autoUpdate",
+      strategies: "generateSW", // genera automáticamente el SW
+      injectRegister: "auto",
       includeAssets: [
         "favicon.svg",
         "hero.png", 
@@ -20,8 +23,8 @@ export default defineConfig({
       ],
       workbox: {
         navigateFallback: "/index.html",
-        // Agregamos las extensiones necesarias para que Workbox las cachee
         globPatterns: ["**/*.{js,jsx,css,html,ico,png,svg,xml,webmanifest}"],
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // aumenta límite de cache para archivos grandes
       },
       manifest: {
         name: "Mi PWA",
@@ -34,7 +37,6 @@ export default defineConfig({
         screenshots: [
           {
             src: "/img/auww.png",
-            // Subimos el tamaño declarado a 512x512 para cumplir con el mínimo de 320px
             sizes: '360x360', 
             type: 'image/png',
             form_factor: 'narrow',
@@ -51,7 +53,6 @@ export default defineConfig({
         icons: [
           {
             src: "/img/penguin.png",
-            // Cambiado a 512x512 porque el navegador detectó que ese es su tamaño real
             sizes: "512x512", 
             type: "image/png",
             purpose: "any"
@@ -60,10 +61,20 @@ export default defineConfig({
             src: "/img/penguin.png",
             sizes: "512x512",
             type: "image/png",
-            purpose: "maskable" // Recomendado para Android
+            purpose: "maskable"
           },
         ],
       },
     }),
   ],
+  build: {
+    chunkSizeWarningLimit: 600, // evita warnings de chunks grandes
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) return 'vendor' // separa dependencias externas
+        }
+      }
+    }
+  }
 });
