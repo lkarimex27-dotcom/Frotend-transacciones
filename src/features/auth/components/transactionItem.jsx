@@ -13,23 +13,33 @@ export default function TransactionItem({ tr, onChange, style }) {
         }
     };
 
-    // Función para EDITAR (Nueva)
+    // Función para EDITAR mejorada
     const onEdit = async () => {
         const nuevoMonto = prompt("Nuevo monto:", tr.monto);
         const nuevaDestino = prompt("Nueva cuenta destino:", tr.cuenta_destino);
 
         if (nuevoMonto && nuevaDestino) {
             try {
-                // Enviamos los datos al servicio
-                await updateTransaction(tr._id, { 
-                    monto: nuevoMonto, 
-                    cuenta_destino: nuevaDestino 
-                });
+                // Preparamos los datos asegurando que el monto sea numérico
+                const dataToUpdate = { 
+                    cuenta_origen: tr.cuenta_origen, // Se envían para pasar la validación del backend
+                    cuenta_destino: nuevaDestino,
+                    monto: Number(nuevoMonto), 
+                    tipo: tr.tipo 
+                };
+
+                await updateTransaction(tr._id, dataToUpdate);
+                
                 alert("Actualizado correctamente");
-                onChange?.(); // Esto refresca la lista automáticamente
+                onChange?.(); 
             } catch (err) {
-                alert('Error al actualizar');
-                console.error(err);
+                // Mostramos el error específico que devuelve el servidor
+                const errorMsg = err.response?.data?.errors?.[0]?.msg || 
+                                 err.response?.data?.message || 
+                                 "Error de red o servidor";
+                
+                alert(`Error al actualizar: ${errorMsg}`);
+                console.error("Detalle del error:", err.response?.data);
             }
         }
     };
@@ -50,13 +60,17 @@ export default function TransactionItem({ tr, onChange, style }) {
             </td>
             <td style={cellStyle}>
                 <div style={{ display: 'flex', gap: '10px' }}>
-                    {/* Botón Editar */}
-                    <button onClick={onEdit} style={{ color: '#f39c12', border: 'none', background: 'none', cursor: 'pointer', fontWeight: 'bold' }}>
+                    <button 
+                        onClick={onEdit} 
+                        style={{ color: '#f39c12', border: 'none', background: 'none', cursor: 'pointer', fontWeight: 'bold' }}
+                    >
                         Editar
                     </button>
                     
-                    {/* Botón Eliminar */}
-                    <button onClick={onDelete} style={{ color: '#e74c3c', border: 'none', background: 'none', cursor: 'pointer' }}>
+                    <button 
+                        onClick={onDelete} 
+                        style={{ color: '#e74c3c', border: 'none', background: 'none', cursor: 'pointer' }}
+                    >
                         Eliminar
                     </button>
                 </div>
