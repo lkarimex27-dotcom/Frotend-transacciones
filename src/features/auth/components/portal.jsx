@@ -3,7 +3,7 @@ import { listTransactions } from '../services/transaction.service';
 import TransactionForm from './transactionForm';     
 import TransactionList from './transactionList';     
 import { Myaccount } from './Myaccount';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../../../../AuthContext';
 
 export default function Portal() {
   const { isAuth, logout } = useAuth();
