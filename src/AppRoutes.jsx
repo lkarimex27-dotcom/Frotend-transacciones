@@ -1,6 +1,6 @@
 import React from 'react'
 import { HashRouter, Routes, Route } from 'react-router-dom'
-import { useAuth } from './features/auth/context/AuthContext' 
+import { useAuth } from './features/auth/context/authcontext' 
 
 // Componentes Layouts
 import { Header } from './features/layout/Header'
