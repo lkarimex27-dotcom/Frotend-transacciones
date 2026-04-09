@@ -1,7 +1,7 @@
 import axios from 'axios';
 const api = axios.create({
   // Eliminamos el localhost para que no haya dudas
-  baseURL: import.meta.env.VITE_API_URL || 'https://backend-transacciones.onrender.com/api/auth',
+  baseURL: import.meta.env.VITE_API_URL || 'https://backend-transacciones.onrender.com/api',
   headers: { 'Content-Type': 'application/json' },
 });
 // Interceptor para adjuntar el token si existe:
