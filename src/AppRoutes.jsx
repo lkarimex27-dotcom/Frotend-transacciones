@@ -5,7 +5,7 @@ import { useAuth } from './features/auth/context/AuthContext'
 // Componentes Layouts
 import { Header } from './features/layout/Header'
 import { Footer } from './features/layout/Footer'
-import { Content } from './features/layout/content'
+import { Content } from './features/layout/Content'
 import { Beneficios } from './features/view/components/Beneficios'
 import { Precios } from './features/view/components/Precios'
 import { Pasos } from './features/view/components/Pasos'
