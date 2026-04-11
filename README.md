@@ -1,17 +1,17 @@
 # 💸 Frontend Aprendices — Plataforma de Transacciones Financieras
 
-Screenshot
-
----
-
+<div align="center">
+  <img src="public/img/Perfil.jpeg" alt="Perfil del Autor" width="900">
   
-React  
-Vite  
-MUI  
-Bootstrap  
-Axios  
-React Router
+  ### Luz Karime Loaiza Muñoz
+  **Tecnología en Análisis y Desarrollo de Software (ADSO) - SENA**
 
+  ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+  ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+  ![MUI](https://img.shields.io/badge/MUI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
+  ![PWA](https://img.shields.io/badge/PWA-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white)
+  ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+</div>
 ---
 
 ## 📝 Descripción
@@ -78,8 +78,7 @@ FRONTEND-APRENDICES/
 ├── public/
 │   ├── img/                            # Imágenes estáticas
 │   │   ├── auww.png
-│   │   ├── computador.avif
-│   │   ├── cuentas.avif
+|   │   ├── Perfil.jpeg
 │   │   ├── favicon.svg
 │   │   ├── hero.png
 │   │   ├── icons.svg
@@ -214,19 +213,6 @@ VITE_API_URL=https://backend-transacciones.onrender.com/api
 | 🖥️ **Frontend (Producción)** | [https://frotend-transacciones.vercel.app](https://frotend-transacciones.vercel.app)             |
 | ⚙️ **Backend (Producción)**   | [https://backend-transacciones.onrender.com/api](https://backend-transacciones.onrender.com/api) |
 | 🗄️ **Base de Datos**         | MongoDB Atlas — Cluster0 (Transacciones)                                                         |
-
-
----
-
-## 🖼️ Screenshots de la Interfaz
-
-
-| Vista                   | Descripción                                                   |
-| ----------------------- | ------------------------------------------------------------- |
-| 🏠 **Home / Portal**    | Pantalla de bienvenida con balance total y métricas de ahorro |
-| 🔐 **Login / Registro** | Formulario de autenticación de usuarios                       |
-| 💳 **Transacciones**    | Listado y creación de transacciones                           |
-| 💰 **Precios**          | Sección de planes y precios                                   |
 
 
 ---
