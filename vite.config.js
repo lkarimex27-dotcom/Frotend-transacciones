@@ -17,6 +17,7 @@ export default defineConfig({
         "react.svg", 
         "penguin.png", 
         "world.png",
+        "Perfil.jpeg",
         "vite.svg",
         "robots.txt"
       ],
