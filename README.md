@@ -1,11 +1,15 @@
 # 💸 Frontend Aprendices — Plataforma de Transacciones Financieras
 
-React
-Vite
-MUI
-Bootstrap
-Axios
-React Router
+<div align="center">
+
+![React](https://img.shields.io/badge/React-19.x-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-6.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![MUI](https://img.shields.io/badge/MUI-7.x-007FFF?style=for-the-badge&logo=mui&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.x-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-1.x-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-7.x-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+
+</div>
 
 ---
 
@@ -24,17 +28,15 @@ Este proyecto es una **Aplicación de Página Única (SPA)** construida con **Re
 
 ## ✨ Características Principales
 
-
-| Característica                  | Descripción                                                                           |
-| ------------------------------- | ------------------------------------------------------------------------------------- |
-| 🔐 **Autenticación Completa**   | Registro e inicio de sesión con validación mediante `AuthContext`                     |
-| 💳 **Gestión de Transacciones** | Listado, creación y visualización de transacciones con `transactionItem.jsx`          |
+| Característica | Descripción |
+|---|---|
+| 🔐 **Autenticación Completa** | Registro e inicio de sesión con validación mediante `AuthContext` |
+| 💳 **Gestión de Transacciones** | Listado, creación y visualización de transacciones con `transactionItem.jsx` |
 | 🌐 **Integración con API REST** | Comunicación con backend mediante Axios (`auth.service.js`, `transaction.service.js`) |
-| 🧭 **Enrutamiento Protegido**   | Rutas privadas/públicas configuradas en `AppRoutes.jsx`                               |
-| 🎨 **Portal de Acceso**         | Componente `portal.jsx` para la entrada principal al sistema                          |
-| 📱 **Diseño Responsivo**        | Interfaz adaptable a distintos tamaños de pantalla con CSS modular                    |
-| ⚡ **Build Optimizado**          | Configuración de Vite para alta velocidad en desarrollo y producción                  |
-
+| 🧭 **Enrutamiento Protegido** | Rutas privadas/públicas configuradas en `AppRoutes.jsx` |
+| 🎨 **Portal de Acceso** | Componente `portal.jsx` para la entrada principal al sistema |
+| 📱 **Diseño Responsivo** | Interfaz adaptable a distintos tamaños de pantalla con CSS modular |
+| ⚡ **Build Optimizado** | Configuración de Vite para alta velocidad en desarrollo y producción |
 
 ---
 
@@ -54,7 +56,6 @@ Botón CTA:         #111827  (Negro) con texto blanco
 ```
 
 ### Componentes Visuales Principales
-
 - 📋 **TransactionForm** — Formulario para registrar nuevas transacciones.
 - 🗂️ **TransactionList** — Listado de todas las transacciones del usuario.
 - 🃏 **TransactionItem** — Tarjeta individual de cada transacción.
@@ -139,20 +140,18 @@ FRONTEND-APRENDICES/
 
 ## 🛠️ Stack Tecnológico
 
-
-| Capa              | Tecnología                  | Versión   |
-| ----------------- | --------------------------- | --------- |
-| **Framework**     | React.js                    | 19.x      |
-| **Build Tool**    | Vite                        | 6.x       |
-| **UI Library**    | Material UI (MUI)           | 7.x       |
-| **Estilos**       | Bootstrap + CSS3            | 5.x       |
-| **Íconos**        | Bootstrap Icons + MUI Icons | 1.x / 7.x |
-| **HTTP Client**   | Axios                       | 1.x       |
-| **Enrutamiento**  | React Router DOM            | 7.x       |
-| **Estado Global** | React Context API           | Built-in  |
-| **PWA**           | vite-plugin-pwa             | 1.x       |
-| **Linter**        | ESLint                      | 9.x       |
-
+| Capa | Tecnología | Versión |
+|---|---|---|
+| **Framework** | React.js | 19.x |
+| **Build Tool** | Vite | 6.x |
+| **UI Library** | Material UI (MUI) | 7.x |
+| **Estilos** | Bootstrap + CSS3 | 5.x |
+| **Íconos** | Bootstrap Icons + MUI Icons | 1.x / 7.x |
+| **HTTP Client** | Axios | 1.x |
+| **Enrutamiento** | React Router DOM | 7.x |
+| **Estado Global** | React Context API | Built-in |
+| **PWA** | vite-plugin-pwa | 1.x |
+| **Linter** | ESLint | 9.x |
 
 ---
 
@@ -174,20 +173,18 @@ npm install
 npm run dev
 ```
 
-La aplicación estará disponible en **[http://localhost:5173](http://localhost:5173)** (o el puerto que indique Vite al iniciar).
+La aplicación estará disponible en **http://localhost:5173** (o el puerto que indique Vite al iniciar).
 
 ---
 
 ## 📁 Scripts Disponibles
 
-
-| Comando           | Descripción                                    |
-| ----------------- | ---------------------------------------------- |
-| `npm run dev`     | Inicia el servidor de desarrollo con HMR       |
-| `npm run build`   | Genera el build de producción en `/dist`       |
+| Comando | Descripción |
+|---|---|
+| `npm run dev` | Inicia el servidor de desarrollo con HMR |
+| `npm run build` | Genera el build de producción en `/dist` |
 | `npm run preview` | Previsualiza el build de producción localmente |
-| `npm run lint`    | Ejecuta ESLint para revisar el código          |
-
+| `npm run lint` | Ejecuta ESLint para revisar el código |
 
 ---
 
@@ -203,32 +200,42 @@ VITE_API_URL=https://backend-transacciones.onrender.com/api
 
 ### 🌐 URLs del Proyecto
 
-
-| Entorno                       | URL                                                                                              |
-| ----------------------------- | ------------------------------------------------------------------------------------------------ |
-| 🖥️ **Frontend (Producción)** | [https://frotend-transacciones.vercel.app](https://frotend-transacciones.vercel.app)             |
-| ⚙️ **Backend (Producción)**   | [https://backend-transacciones.onrender.com/api](https://backend-transacciones.onrender.com/api) |
-| 🗄️ **Base de Datos**         | MongoDB Atlas — Cluster0 (Transacciones)                                                         |
-
+| Entorno | URL |
+|---|---|
+| 🖥️ **Frontend (Producción)** | https://frotend-transacciones.vercel.app |
+| ⚙️ **Backend (Producción)** | https://backend-transacciones.onrender.com/api |
+| 🗄️ **Base de Datos** | MongoDB Atlas — Cluster0 (Transacciones) |
 
 ---
 
+## 🖼️ Screenshots de la Interfaz
+
+| Vista | Descripción |
+|---|---|
+| 🏠 **Home / Portal** | Pantalla de bienvenida con balance total y métricas de ahorro |
+| 🔐 **Login / Registro** | Formulario de autenticación de usuarios |
+| 💳 **Transacciones** | Listado y creación de transacciones |
+| 💰 **Precios** | Sección de planes y precios |
+
+---
 
 ## 👨‍💻 Datos del Autor
 
-
-| Campo               | Información                                                |
-| ------------------- | ---------------------------------------------------------- |
-| 👤 **Nombre**       | Luz Karime Loaiza Muñoz                                    |
-| 🏛️ **Institución** | SENA                                                       |
-| 🎓 **Programa**     | Tecnología en Análisis y Desarrollo de Software            |
-| 💼 **Rol**          | Desarrollador Frontend / UI Designer                       |
-| 📧 **Correo**       | [Lkarimex27@gmail.com](mailto:Lkarimex27@gmail.com)        |
-| 🐙 **GitHub**       | [@lkarimex27-dotcom](https://github.com/lkarimex27-dotcom) |
-
+| Campo | Información |
+|---|---|
+| 👤 **Nombre** | Luz Karime Loaiza Muñoz |
+| 🏛️ **Institución** | SENA |
+| 🎓 **Programa** | Tecnología en Análisis y Desarrollo de Software |
+| 💼 **Rol** | Desarrollador Frontend / UI Designer |
+| 📧 **Correo** | Lkarimex27@gmail.com |
+| 🐙 **GitHub** | [@lkarimex27-dotcom](https://github.com/lkarimex27-dotcom) |
 
 ---
+
+<div align="center">
 
 Hecho con ❤️ y dedicación durante la formación en el SENA 🎓
 
 **Frontend Aprendices © 2026**
+
+</div>
