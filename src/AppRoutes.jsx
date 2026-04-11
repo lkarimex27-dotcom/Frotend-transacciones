@@ -5,7 +5,10 @@ import { useAuth } from './features/auth/context/AuthContext'
 // Componentes Layouts
 import { Header } from './features/layout/Header'
 import { Footer } from './features/layout/Footer'
-import { Content } from './features/layout/Content'
+import { Content } from './features/layout/content'
+import { Beneficios } from './features/view/components/Beneficios'
+import { Precios } from './features/view/components/Precios'
+import { Pasos } from './features/view/components/Pasos'
 
 // 1. IMPORTAMOS COMO "Api" (que es como lo tienes en el archivo)
 import { Api } from './features/shared/components/ApiRy' 
@@ -19,7 +22,9 @@ export const AppRoutes = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Content />} />
-        
+        <Route path="/beneficios" element={<Beneficios />} />
+        <Route path="/precios" element={<Precios />} />
+        <Route path="/pasos" element={<Pasos />} />
         {/* 2. USAMOS EL MISMO NOMBRE AQUÍ: <Api /> */}
         <Route path="/Api" element={<Api />} />
 

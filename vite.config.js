@@ -12,6 +12,7 @@ export default defineConfig({
         "favicon.svg",
         "hero.png", 
         "icons.svg",
+        "mundo.png",
         "Logo1.0.ico", 
         "react.svg", 
         "penguin.png", 
@@ -34,16 +35,16 @@ export default defineConfig({
         theme_color: "#000000",
         screenshots: [
           {
-            src: "/img/auww.png",
+            src: "/img/mundo.png",
             // Subimos el tamaño declarado a 512x512 para cumplir con el mínimo de 320px
-            sizes: '360x360', 
+            sizes: '500x500', 
             type: 'image/png',
             form_factor: 'narrow',
             label: "Vista Móvil"
           },
           {
-            src: '/img/auww.png',
-            sizes: '360x360',
+            src: '/img/mundo.png',
+            sizes: '500x500',
             type: 'image/png',
             form_factor: 'wide',
             label: "Vista Escritorio"
