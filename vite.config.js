@@ -12,7 +12,7 @@ export default defineConfig({
         "favicon.svg",
         "hero.png", 
         "icons.svg",
-        "mundo.png",
+        "mundo.jpeg",
         "Logo1.0.ico", 
         "react.svg", 
         "penguin.png", 
@@ -35,7 +35,7 @@ export default defineConfig({
         theme_color: "#000000",
         screenshots: [
           {
-            src: "/img/mundo.png",
+            src: "/img/mundo.jpeg",
             // Subimos el tamaño declarado a 512x512 para cumplir con el mínimo de 320px
             sizes: '500x500', 
             type: 'image/png',
@@ -43,7 +43,7 @@ export default defineConfig({
             label: "Vista Móvil"
           },
           {
-            src: '/img/mundo.png',
+            src: '/img/mundo.jpeg',
             sizes: '500x500',
             type: 'image/png',
             form_factor: 'wide',
